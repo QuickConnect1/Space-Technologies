@@ -1,0 +1,115 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<!-- PAGE WRAPPER -->
+<section class="min-h-screen bg-gray-50 py-14 px-4">
+
+    <!-- TITLE -->
+    <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-800">Contact Us</h1>
+        <p class="text-gray-600 mt-2">
+            Let’s build your next digital solution together.
+        </p>
+    </div>
+
+    <!-- GRID -->
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+
+        <!-- CONTACT FORM -->
+        <div class="bg-white p-8 rounded-2xl shadow hover:shadow-xl transition">
+
+            <h2 class="text-xl font-bold mb-6 text-blue-600">Send a Message</h2>
+
+            <form method="POST" class="space-y-4">
+                {% csrf_token %}
+
+                <input type="text" name="name" placeholder="Your Name"
+                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <input type="email" name="email" placeholder="Your Email"
+                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+
+                <textarea name="message" rows="5" placeholder="Your Message"
+                    class="w-full p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+                <button type="submit"
+                    class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition font-semibold">
+                    Send Message
+                </button>
+            </form>
+
+        </div>
+
+
+        <!-- CONNECT SECTION -->
+        <div class="space-y-6">
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/254792913770"
+               target="_blank"
+               class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"
+                     class="w-10 h-10">
+
+                <div>
+                    <h3 class="font-bold">WhatsApp</h3>
+                    <p class="text-sm text-gray-500">Chat with us instantly</p>
+                </div>
+
+            </a>
+
+
+            <!-- Facebook -->
+            <a href="https://facebook.com/profile.php?id=61570432288142"
+               target="_blank"
+               class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+                     class="w-10 h-10">
+
+                <div>
+                    <h3 class="font-bold">Facebook</h3>
+                    <p class="text-sm text-gray-500">Follow our updates</p>
+                </div>
+
+            </a>
+
+
+            <!-- X (Twitter) -->
+            <a href="https://x.com/quickconct.com/"
+               target="_blank"
+               class="flex items-center gap-4 bg-white p-5 rounded-xl shadow hover:shadow-xl hover:-translate-y-1 transition">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                     class="w-10 h-10">
+
+                <div>
+                    <h3 class="font-bold">X</h3>
+                    <p class="text-sm text-gray-500">Tech updates & insights</p>
+                </div>
+
+            </a>
+
+
+            <!-- EMAIL -->
+            <div class="flex items-center gap-4 bg-white p-5 rounded-xl shadow">
+
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"
+                     class="w-10 h-10">
+
+                <div>
+                    <h3 class="font-bold">Email</h3>
+                    <p class="text-sm text-gray-500">connectq0@gmail.com</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

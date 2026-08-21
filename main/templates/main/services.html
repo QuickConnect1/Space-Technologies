@@ -1,0 +1,174 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<section class="py-16 bg-gray-50">
+
+    <h1 class="text-4xl font-bold text-center mb-12 text-gray-800">
+        Our Services
+    </h1>
+
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+        <!-- SERVICE CARD -->
+        <div class="service-card">
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="img active">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" class="img">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="img">
+            </div>
+
+            <div class="p-6">
+                <h3 class="title">🌐 Web Development</h3>
+                <p>Modern websites, business platforms, and scalable web applications.</p>
+            </div>
+
+        </div>
+
+
+        <!-- SOFTWARE -->
+        <div class="service-card">
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b" class="img active">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="img">
+                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" class="img">
+            </div>
+
+            <div class="p-6">
+                <h3 class="title">💻 Software Systems</h3>
+                <p>Custom dashboards, automation tools, and enterprise systems.</p>
+            </div>
+
+        </div>
+
+
+        <!-- IT SUPPORT (FIXED IMAGES) -->
+        <div class="service-card">
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22731d1c2b" class="img active">
+                <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780" class="img">
+                <img src="https://images.unsplash.com/photo-1593642532400-2682810df593" class="img">
+            </div>
+
+            <div class="p-6">
+                <h3 class="title">🖥 IT Support</h3>
+                <p>System troubleshooting, maintenance, installations, and upgrades.</p>
+            </div>
+
+        </div>
+
+
+        <!-- NETWORKING (FIXED IMAGES) -->
+        <div class="service-card">
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8" class="img active">
+                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" class="img">
+                <img src="https://images.unsplash.com/photo-1698668975271-2ba9a323be6b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="img">
+            </div>
+
+            <div class="p-6">
+                <h3 class="title">🌍 Networking</h3>
+                <p>LAN, WiFi, routers, infrastructure, and enterprise connectivity.</p>
+            </div>
+
+        </div>
+
+
+        <!-- CYBERSECURITY (FIXED IMAGES) -->
+        <div class="service-card">
+
+            <div class="image-container">
+                <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3" class="img active">
+                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y3liZXJzZWN1cml0eXxlbnwwfHwwfHx8MA%3D%3D" class="img">
+                <img src="https://images.unsplash.com/photo-1510519138101-570d1dca3d66" class="img">
+            </div>
+
+            <div class="p-6">
+                <h3 class="title">🔐 Cybersecurity</h3>
+                <p>System protection, data security, and network defense solutions.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- STYLES -->
+<style>
+
+.service-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.image-container {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.img.active {
+    opacity: 1;
+}
+
+.title {
+    color: #2563eb;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+</style>
+
+
+<!-- SCRIPT -->
+<script>
+
+document.querySelectorAll('.service-card').forEach(card => {
+    let images = card.querySelectorAll('.img');
+    let index = 0;
+    let interval;
+
+    card.addEventListener('mouseenter', () => {
+        interval = setInterval(() => {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }, 1500);
+    });
+
+    card.addEventListener('mouseleave', () => {
+        clearInterval(interval);
+        images.forEach(img => img.classList.remove('active'));
+        images[0].classList.add('active');
+        index = 0;
+    });
+});
+
+</script>
+
+{% endblock %}

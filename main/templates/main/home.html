@@ -1,0 +1,137 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="relative h-[90vh] flex items-center justify-center text-center bg-cover bg-center"
+style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80');">
+
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-blue-900/60 to-black/80"></div>
+
+    <div class="relative z-10 px-6 max-w-3xl">
+
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+            Space Technologies
+        </h1>
+
+        <p class="text-gray-200 mt-4 text-lg">
+            We design and build modern digital systems, websites, software solutions,
+            and IT infrastructure that power businesses globally.
+        </p>
+
+        <a href="/contact/"
+           class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 transition px-8 py-3 rounded-lg text-white font-semibold">
+            Start Your Project
+        </a>
+
+    </div>
+</section>
+
+
+<!-- SERVICES SECTION -->
+<section class="py-16 bg-gray-50">
+
+    <h2 class="text-3xl font-bold text-center mb-10 text-gray-800">
+        Our Services
+    </h2>
+
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+
+        <!-- Web Development -->
+        <div class="group relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+
+            <!-- Image -->
+            <div class="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80"
+                     class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-blue-600 mb-2">Web Development</h3>
+                <p class="text-gray-600 text-sm">
+                    We build fast, responsive and modern websites for businesses, startups, and organizations.
+                </p>
+            </div>
+
+            <!-- Hover Glow -->
+            <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-10 transition"></div>
+
+        </div>
+
+
+        <!-- Software Systems -->
+        <div class="group relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+
+            <div class="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1200&q=80"
+                     class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-blue-600 mb-2">Software Systems</h3>
+                <p class="text-gray-600 text-sm">
+                    Custom dashboards, automation systems, business management platforms and APIs.
+                </p>
+            </div>
+
+            <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-10 transition"></div>
+
+        </div>
+
+
+        <!-- IT Support -->
+        <div class="group relative bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+
+            <div class="h-48 overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1581091870622-1e7b7f3f6d66?auto=format&fit=crop&w=1200&q=80"
+                     class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+            </div>
+
+            <div class="p-6">
+                <h3 class="text-xl font-bold text-blue-600 mb-2">IT Support & Networking</h3>
+                <p class="text-gray-600 text-sm">
+                    We handle troubleshooting, network setup, maintenance, and full IT infrastructure support.
+                </p>
+            </div>
+
+            <div class="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-10 transition"></div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT SHORT SECTION -->
+<section class="py-12 bg-white">
+
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+        <h2 class="text-2xl font-bold mb-3">Why Space Technologies?</h2>
+
+        <p class="text-gray-600 leading-relaxed">
+            We combine creativity, engineering, and modern technology to deliver scalable digital solutions.
+            Our mission is to help businesses move from traditional systems into intelligent digital platforms.
+        </p>
+
+    </div>
+</section>
+
+
+<!-- CTA SECTION -->
+<section class="py-14 bg-blue-600 text-white text-center">
+
+    <h2 class="text-3xl font-bold">Let’s Build Something Powerful</h2>
+
+    <p class="mt-2 text-blue-100">
+        Start your digital transformation today.
+    </p>
+
+    <a href="/contact/"
+       class="mt-5 inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">
+        Contact Us
+    </a>
+
+</section>
+
+{% endblock %}

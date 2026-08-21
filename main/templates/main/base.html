@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Space Technologies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-black text-white p-4 flex justify-between items-center">
+    <h2 class="text-xl font-bold">Space Technologies</h2>
+
+    <nav class="space-x-4">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="/services/" class="hover:text-gray-300">Services</a>
+        <a href="/work/" class="hover:text-gray-300">Work</a>
+        <a href="/about/" class="hover:text-gray-300">About</a>
+        <a href="/contact/" class="hover:text-gray-300">Contact</a>
+    </nav>
+</header>
+{% if messages %}
+  <div class="fixed top-5 right-5 z-50">
+    {% for message in messages %}
+      <div class="bg-green-500 text-white px-4 py-2 rounded shadow mb-2">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Space Technologies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVBAR -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        
+        <h2 class="text-2xl font-bold text-blue-600">Space Technologies</h2>
+
+        <nav class="space-x-6 font-medium">
+            <a href="/" class="hover:text-blue-600">Home</a>
+            <a href="/services/" class="hover:text-blue-600">Services</a>
+            <a href="/work/" class="hover:text-blue-600">Work</a>
+            <a href="/about/" class="hover:text-blue-600">About</a>
+            <a href="/contact/" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                Contact
+            </a>
+        </nav>
+
+    </div>
+</header>
+
+<!-- SUCCESS MESSAGE -->
+{% if messages %}
+  <div class="fixed top-5 right-5 z-50">
+    {% for message in messages %}
+      <div class="bg-green-500 text-white px-4 py-2 rounded shadow mb-2 animate-bounce">
+        {{ message }}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
+
+<!-- CONTENT -->
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white text-center p-8 mt-10">
+    <h3 class="text-lg font-semibold">Space Technologies</h3>
+    <p class="text-gray-400 mt-2">Building modern digital systems worldwide</p>
+    <p class="text-sm mt-4">© 2026 All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
