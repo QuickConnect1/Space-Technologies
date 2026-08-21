@@ -7,19 +7,21 @@ __pycache__/
 env/
 venv/
 
-# Database
+# Django database
+db.sqlite3
+*.sqlite3
 
-# Media uploads (optional)
+# Media uploads
 media/
 
 # Static files collected for production
 staticfiles/
 
-# VS Code
-.vscode/
-
 # Environment variables
 .env
+
+# VS Code
+.vscode/
 
 # macOS
 .DS_Store
